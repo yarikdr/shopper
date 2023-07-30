@@ -1,47 +1,30 @@
 function HTML() {
-  const toBeMoved = Array.from(document.querySelectorAll('[data-move]'))
-  const parents = toBeMoved.map(item => item.parentElement)
-  function change(arg) {
-    if (arg) {
-      toBeMoved.forEach(item => {
-        const dest = document.querySelector(item.dataset.move)
-        dest.append(item)
-      })
-    } else {
-      toBeMoved.forEach((item, i) => parents[i].append(item))
-    }
-  }
+  function movingElems(selector) {
+    const toBeMoved = Array.from(document.querySelector(selector).querySelectorAll('[data-move]')),
+          parents = toBeMoved.map(item => item.parentElement)
 
-  if (document.documentElement.offsetWidth <= 1084) {
-    change(true)
-    const paths = [...document.querySelector('.header__login svg').children]
-    paths.forEach(item => {
-      item.setAttribute('fill', '#10B981')
-    })
-  } else {
-    change(false)
-    const paths = [...document.querySelector('.header__login svg').children]
-    paths.forEach(item => {
-      item.setAttribute('fill', 'white')
+    toBeMoved.forEach((elem, i) => {
+      const [dest, bp] = elem.dataset.move.split(' '),
+            svgs = document.querySelectorAll('.header__login svg path')
+      const mql = window.matchMedia(`(max-width: ${bp}px)`)
+      function change() {
+        if (mql.matches) {
+          document.querySelector(dest).append(elem)
+          svgs.forEach(path => path.setAttribute('fill', '#10B981'))
+        } else {
+          parents[i].append(elem)
+          svgs.forEach(path => path.setAttribute('fill', 'white'))
+        }
+      }
+
+      change()
+
+      mql.addEventListener('change', change)
+
     })
   }
 
-  window.addEventListener('resize', () => {
-    const w = document.documentElement.offsetWidth
-    if (w <= 1084) {
-      change(true)
-      const paths = [...document.querySelector('.header__login svg').children]
-      paths.forEach(item => {
-        item.setAttribute('fill', '#10B981')
-      })
-    } else {
-      change(false)
-      const paths = [...document.querySelector('.header__login svg').children]
-      paths.forEach(item => {
-        item.setAttribute('fill', 'white')
-      })
-    }
-  })
+  movingElems('.header')
 
   const burger = document.querySelector('.burger')
   burger.addEventListener('click', () => {

@@ -2,11 +2,12 @@
   .header {
     &__search {
       flex: none;
-      margin-right: 0;
     }
+
     &__added {
       margin-right: 0;
     }
+
     &__login {
       background-color: $Dwhite;
       color: $black;
@@ -15,6 +16,7 @@
       }
     }
   }
+
   .menu {
     &.active {
       left: 0;
@@ -31,27 +33,11 @@
     justify-content: start;
     padding: 50px 30px 0;
     gap: 20px;
-    &__section {
-      flex-direction: column;
-      gap: 20px;
-    }
 
     &__item {
       font-size: 18px;
       margin-bottom: 20px;
       position: relative;
-      // &::before {
-      //   content: '';
-      //   display: block;
-      //   position: absolute;
-      //   top: 50%;
-      //   transform: translateY(-50%);
-      //   width: 10px;
-      //   height: 10px;
-      //   border-radius: 50%;
-      //   // background-color: $defaultBlack;
-      //   // border: 1px solid $defaultBlack;
-      // }
     }
   }
 

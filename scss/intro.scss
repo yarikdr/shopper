@@ -1,0 +1,124 @@
+.intro {
+  margin-top: 69px; //126-57=69
+  .container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+  }
+
+  // &__content {}
+
+  &__title {
+    font-size: 64px;
+    max-width: 599px;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__text {
+    font-size: 21px;
+    color: $black;
+    line-height: 166.667%;
+    max-width: 549px;
+    &:not(:last-child) {
+      margin-bottom: 52px;
+    }
+  }
+
+  &__btn {
+    &:not(:last-child) {
+      margin-bottom: 107px;
+    }
+  }
+
+  &__reviews {
+    display: flex; 
+    align-items: center;
+    img:not(:first-child) {
+      margin-left: -15px;
+    }
+    p {
+      color: $black;
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 134.615%;
+      margin-left: 14px;
+    }
+  }
+
+  &__images {
+    position: relative;
+  }
+
+  &__circled-title {
+    color: $black;
+    font-size: 40px;
+    font-weight: 600;
+    position: absolute;
+    top: 0;
+    left: 130px;
+  }
+
+  &__img {
+    padding: 76px 4px 38px;
+    background-color: #ECFEF4;
+    border-radius: 136px;
+    margin-right: 141px;
+    margin-top: 51px;
+    margin-left: 30px;
+    display: grid;
+    place-items: center;
+    img {
+      max-width: 280px;
+      object-fit: cover;
+    }
+  }
+
+  &__price {
+    color: $black;
+    font-size: 31px;
+    font-weight: 600;
+    margin-top: 26px;
+  }
+
+  &__playvideo {
+    position: absolute;
+    left: -150px;
+    bottom: 60px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      border-radius: 50%;
+      margin-bottom: 17px;
+    }
+    span {
+      color: $black;
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 166.667%;
+    }
+    &-border {
+      position: absolute;
+      top: -8px;
+      left: 17px;
+    }
+  }
+
+  &__star-1 {
+    position: absolute;
+    z-index: -1;
+    left: 759px;
+    top: -32px;
+  }
+
+  &__star-2 {
+    position: absolute;
+    z-index: -1;
+    left: 100%;
+    top: 100%;
+    transform: translate(-100%, -100%);
+  }
+}

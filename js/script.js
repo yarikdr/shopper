@@ -33,6 +33,12 @@ function HTML() {
   })
 }
 
+function rotation() {
+  new CircleType(document.querySelector('#circled')).radius(220)
+  document.querySelector('.intro__circled-title').style.transform = 'rotate(-20deg)'
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   HTML()
+  rotation()
 })

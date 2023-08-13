@@ -44,4 +44,120 @@
   .burger {
     display: block;
   }
+
+  .intro {
+    margin-top: 0;
+    &__img {
+      margin-right: 0;
+    }
+  }
 }
+
+@media (max-width: 930px) {
+  .intro {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__content {
+      order: 2;
+    }
+
+    &__title {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__text {
+      text-align: center;
+      margin: 0 auto;
+    }
+
+    &__btn {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &__images {
+      order: 1;
+      margin-bottom: 20px;
+    }
+
+    &__star-1 {
+      left: 84%;
+      opacity: 0.6;
+    }
+
+    &__star-2 {
+      opacity: 0.6;
+    }
+
+    &__img {
+      margin-left: 0;
+    }
+
+    #circled {
+      position: relative;
+      left: -25px;
+    }
+
+    &__playvideo {
+      position: relative;
+      left: 0;
+      top: 0;
+      margin: 30px auto 0;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .header {
+    padding-bottom: 0;
+  }
+  .intro {
+    &__title {
+      font-size: 45px;
+    }
+
+    &__text {
+      font-size: 18px;
+      &:not(:last-child) {
+        margin-bottom: 25px;
+      }
+    }
+
+    &__circled-title {
+      font-size: 30px;
+    }
+
+    #circled {
+      left: -50px;
+    }
+
+    &__img {
+      padding: 38px 4px;
+      img {
+        max-width: 210px;
+      }
+    }
+
+    &__btn {
+      &:not(:last-child) {
+        margin-bottom: 30px;
+      }
+    }
+
+    &__reviews {
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: 30px;
+      p {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//sass -w scss/style.scss:css/style.min.css --style compressed

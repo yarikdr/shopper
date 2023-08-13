@@ -110,14 +110,15 @@
   &__star-1 {
     position: absolute;
     z-index: -1;
-    left: 759px;
+    // left: 759px;
+    left: 59.5%;
     top: -32px;
   }
 
   &__star-2 {
     position: absolute;
     z-index: -1;
-    left: 100%;
+    left: 90%;
     top: 100%;
     transform: translate(-100%, -100%);
   }

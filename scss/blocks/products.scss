@@ -1,0 +1,86 @@
+.products {
+  margin-top: 40px;
+  background-color: $violet;
+  padding: 45px 0;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+  }
+
+  // &__airpods {}
+
+  &__title {
+    font-size: 60px;
+    font-weight: 600;
+    color: $Dwhite;
+    margin-bottom: 37px;
+  }
+
+  &__images {
+    display: flex;
+    gap: 30px;
+    img {
+      border-radius: 179px;
+    }
+
+    img:nth-child(2) {
+      transform: translateY(-70px);
+    }
+    margin-bottom: 20px;
+  }
+
+  &__price {
+    color: $Dwhite;
+    font-size: 31px;
+    line-height: 112.903%;
+    text-align: center;
+    span {
+      font-weight: 600;
+    }
+    .separator {
+      font-weight: 400;
+      margin-left: 5px;
+      margin-right: 20px;
+    }
+  }
+
+  &__description {
+    margin-top: 73px;
+    flex: 1 1 500px;
+  }
+
+  &__featured-title {
+    color: $Dwhite;
+    margin-bottom: 10px;
+  }
+
+  &__text {
+    color: $Dwhite;
+    font-size: 21px;
+    font-weight: 500;
+    line-height: 166.667%;
+    margin-bottom: 35px;
+    max-width: 500px;
+  }
+
+  &__btn {
+    display: inline-block;
+    padding: 22px 70px;
+    box-shadow: 0px 25px 50px 0px rgba(255, 255, 255, 0.10);
+    margin-right: 20px;
+  }
+
+  &__view-more {
+    color: $Dwhite;
+    font-size: 21px;
+    font-weight: 600;
+    background-color: transparent;
+    padding: 22px 70px;
+    border-radius: 10px;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.20);
+    } 
+  }
+}

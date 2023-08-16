@@ -35,6 +35,19 @@ body {
   }
 }
 
+.secondary-btn {
+  color: $Dwhite;
+  font-size: 21px;
+  font-weight: 600;
+  background-color: transparent;
+  padding: 22px 70px;
+  border-radius: 10px;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.20);
+  } 
+}
+
 @import "blocks/blocks";
 
 @import "media";

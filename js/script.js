@@ -38,7 +38,53 @@ function rotation() {
   document.querySelector('.intro__circled-title').style.transform = 'rotate(-20deg)'
 }
 
+function slider({selector, btns} = {}) {
+  const [prev, next] = btns.map(sel => document.querySelector(sel)),
+        slides = [...document.querySelector(selector).children]
+  let slideIndex = 0
+
+  const hideSlides = () => {
+    slides.forEach(slide => {
+      slide.classList.add('hide')
+    })
+  }
+
+  const showSlide = i => {
+    hideSlides()
+    slides[i].classList.remove('hide')
+  } 
+
+  const plusSlide = i => {
+    slideIndex += i
+    if (slideIndex < 0) {
+      slideIndex = slides.length - 1
+    } 
+
+    if (slideIndex >= slides.length) {
+      slideIndex = 0
+    }
+    // console.log(slideIndex)
+    showSlide(slideIndex)
+  }
+
+  hideSlides()
+  showSlide(slideIndex)
+  prev.addEventListener('click', () => {
+    plusSlide(-1)
+    slides[slideIndex].classList.remove('fadeInRight')
+    slides[slideIndex].classList.add('fadeInLeft')
+  })
+  next.addEventListener('click', () => {
+    plusSlide(1)
+    slides[slideIndex].classList.remove('fadeInLeft')
+    slides[slideIndex].classList.add('fadeInRight')
+  })
+}
+
 window.addEventListener('DOMContentLoaded', () => {
   HTML()
   rotation()
+  slider({btns: ['#prev', '#next'], selector: '.launches__slider .container'})
 })
+
+//btns: {prev: '#prev', next: '#next'}

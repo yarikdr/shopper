@@ -151,6 +151,15 @@
   }
 }
 
+@media (max-width: 630px) {
+  .footer {
+    &__main {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
 @media (max-width: 930px) {
   .intro {
     .container {
@@ -301,6 +310,29 @@
     }
     &__colors {
       margin-bottom: 20px;
+    }
+  }
+
+  .footer {
+    &__footer {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: 
+        "terms policy"
+        "net net";
+      justify-items: center;
+    }
+
+    &__terms {
+      grid-area: terms;
+    }
+
+    &__policy {
+      grid-area: policy;
+    }
+
+    &__networks {
+      grid-area: net;
     }
   }
 }

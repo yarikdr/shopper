@@ -1,0 +1,138 @@
+.footer {
+  margin-top: 140px;
+  font-family: $font2;
+  // &__body {}
+
+  &__get-started {
+    color: #111;
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+    padding-bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  &__btn-get-started {
+    padding: 14px 41px;
+    border-radius: 0px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: $font2;
+    margin-left: 40px;
+    white-space: nowrap;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  &__form {
+    //!sfkgjf;ljkgsdf max-width
+    max-width: 289px;
+    position: relative;
+    width: 100%;
+    color: #111;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: -0.3px;
+    span {
+      display: block;
+      margin-bottom: 30px;
+      line-height: normal;
+    }
+
+    &_input {
+      width: 100%;
+      color: #111;
+      font-size: 17px;
+      padding: 10px 0 21px;
+      border-bottom: 1px solid rgba(0,0,0,0.2);
+      &::placeholder {
+        color: #1111117a;
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.205px;
+      }
+    }
+
+    &_btn {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 50px;
+      height: 50px;
+      background-color: $green;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-70%, -50%) rotate(45deg);
+        width: 8px;
+        height: 8px;
+        background-color: transparent;
+        border-top: 2.5px solid $Dwhite;
+        border-right: 2.5px solid $Dwhite;
+      }
+    }
+  }
+
+  &__column {
+    *:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &_title {
+      display: block;
+      color: $green;
+      font-size: 17px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.232px;
+    }
+
+    &_item {
+      display: block;
+      color: #111;
+      font-family: DM Sans;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: -0.205px;
+      transition: all 0.2s ease;
+      &:hover {
+        color: $green;
+      }
+    }
+  }
+
+  &__footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 39px;
+    align-items: end;
+  }
+
+  // &__terms {}
+
+  // &__policy {}
+
+  &__networks {
+    font-size: 22px;
+    * {
+      color: #111;
+    }
+    *:not(:last-child) {
+      margin-right: 25px;
+    }
+  }
+}
